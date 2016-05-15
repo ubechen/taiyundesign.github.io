@@ -3,6 +3,7 @@
 }
 
 body {
+	position: relative;
 	&::after, &::before {
 		// these are the 2 half blocks which cover the content once the animation is triggered
 		content: '';
@@ -32,6 +33,17 @@ body {
 	&.page-is-changing::after, &.page-is-changing::before {
 		@include transform(translateY(0));
 		@include transition(transform 0.4s 0s);
+	}
+
+	.body-title {
+		position: absolute;
+	    left: 50%;
+	    top: 25%;
+	    font-family: 'Ubuntu', sans-serif;
+	    font-size: 3rem;
+	    text-transform: uppercase;
+	    color: #fff;
+	    opacity: .8;
 	}
 }
 
